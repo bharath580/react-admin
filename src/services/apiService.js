@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: 'http://localhost:2000/api',
-    // baseURL: 'https://hkapi.kcdev.xyz/api',
+    // baseURL: 'http://localhost:2000/api',
+    baseURL: 'http://13.201.29.152:2000/api',
     
 });
 

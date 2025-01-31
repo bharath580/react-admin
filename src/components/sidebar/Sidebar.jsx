@@ -18,7 +18,7 @@ export default function Sidebar() {
           <Link to="/layout"
             role="button"
             tabIndex="0"
-            className="flex items-center w-full p-3 rounded-lg text-start leading-tight transition-all hover:bg-blue-50 hover:bg-opacity-80 focus:bg-blue-50 focus:bg-opacity-80 active:bg-gray-50 active:bg-opacity-80 hover:text-blue-900 focus:text-blue-900 active:text-blue-900 outline-none"
+            className="flex items-center w-full p-3 rounded-lg text-start leading-tight transition-all hover:bg-green-50 hover:bg-opacity-80 focus:bg-green-50 focus:bg-opacity-80 active:bg-green-50 active:bg-opacity-80 hover:text-green-900 focus:text-green-500 active:text-green-500 outline-none"
           >
             <div className="grid place-items-center mr-4">
               <svg
@@ -41,7 +41,7 @@ export default function Sidebar() {
           to="/layout/purchase"
             role="button"
             tabIndex="0"
-            className="flex items-center w-full p-3 rounded-lg text-start leading-tight transition-all hover:bg-blue-50 hover:bg-opacity-80 focus:bg-blue-50 focus:bg-opacity-80 active:bg-blue-50 active:bg-opacity-80 hover:text-blue-900 focus:text-blue-900 active:text-blue-900 outline-none"
+            className="flex items-center w-full p-3 rounded-lg text-start leading-tight transition-all hover:bg-green-50 hover:bg-opacity-80 focus:bg-green-50 focus:bg-opacity-80 active:bg-green-50 active:bg-opacity-80 hover:text-green-900 focus:text-green-500 active:text-green-500 outline-none"
           >
             <div className="grid place-items-center mr-4">
               <svg
@@ -65,7 +65,7 @@ export default function Sidebar() {
           to="/layout/supplier"
             role="button"
             tabIndex="0"
-            className="flex items-center w-full p-3 rounded-lg text-start leading-tight transition-all hover:bg-blue-50 hover:bg-opacity-80 focus:bg-blue-50 focus:bg-opacity-80 active:bg-blue-50 active:bg-opacity-80 hover:text-blue-900 focus:text-blue-900 active:text-blue-900 outline-none"
+            className="flex items-center w-full p-3 rounded-lg text-start leading-tight transition-all hover:bg-green-50 hover:bg-opacity-80 focus:bg-green-50 focus:bg-opacity-80 active:bg-green-50 active:bg-opacity-80 hover:text-green-900 focus:text-green-500 active:text-green-500 outline-none"
           >
             <div className="grid place-items-center mr-4">
               <svg
@@ -88,7 +88,7 @@ export default function Sidebar() {
           to="/layout/batch"
             role="button"
             tabIndex="0"
-            className="flex items-center w-full p-3 rounded-lg text-start leading-tight transition-all hover:bg-blue-50 hover:bg-opacity-80 focus:bg-blue-50 focus:bg-opacity-80 active:bg-blue-50 active:bg-opacity-80 hover:text-blue-900 focus:text-blue-900 active:text-blue-900 outline-none"
+            className="flex items-center w-full p-3 rounded-lg text-start leading-tight transition-all hover:bg-green-50 hover:bg-opacity-80 focus:bg-green-50 focus:bg-opacity-80 active:bg-green-50 active:bg-opacity-80 hover:text-green-900 focus:text-green-500 active:text-green-500 outline-none"
           >
             <div className="grid place-items-center mr-4">
               <svg
@@ -111,7 +111,7 @@ export default function Sidebar() {
           to="/layout/baling"
             role="button"
             tabIndex="0"
-            className="flex items-center w-full p-3 rounded-lg text-start leading-tight transition-all hover:bg-blue-50 hover:bg-opacity-80 focus:bg-blue-50 focus:bg-opacity-80 active:bg-blue-50 active:bg-opacity-80 hover:text-blue-900 focus:text-blue-900 active:text-blue-900 outline-none"
+            className="flex items-center w-full p-3 rounded-lg text-start leading-tight transition-all hover:bg-green-50 hover:bg-opacity-80 focus:bg-green-50 focus:bg-opacity-80 active:bg-green-50 active:bg-opacity-80 hover:text-green-900 focus:text-green-500 active:text-green-500 outline-none"
           >
             <div className="grid place-items-center mr-4">
               <svg
@@ -135,7 +135,7 @@ export default function Sidebar() {
           to="/layout/sale"
             role="button"
             tabIndex="0"
-            className="flex items-center w-full p-3 rounded-lg text-start leading-tight transition-all hover:bg-blue-50 hover:bg-opacity-80 focus:bg-blue-50 focus:bg-opacity-80 active:bg-blue-50 active:bg-opacity-80 hover:text-blue-900 focus:text-blue-900 active:text-blue-900 outline-none"
+            className="flex items-center w-full p-3 rounded-lg text-start leading-tight transition-all hover:bg-green-50 hover:bg-opacity-80 focus:bg-green-50 focus:bg-opacity-80 active:bg-green-50 active:bg-opacity-80 hover:text-green-900 focus:text-green-500 active:text-green-500 outline-none"
           >
             <div className="grid place-items-center mr-4">
               <svg

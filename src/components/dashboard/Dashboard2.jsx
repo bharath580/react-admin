@@ -19,6 +19,9 @@ export default function Dashboard2() {
     quantityByMaterial,
     topSuppliers,
     segregationMaterial,
+    purchaseTrend,
+    segregationTrend,
+    baleTrend
     
   } = useSelector((state) => state.dashboard.dashboardData);
 const {isLoading}=useSelector((state) => state.dashboard);
@@ -44,6 +47,21 @@ const {isLoading}=useSelector((state) => state.dashboard);
     }
     console.log("dashboardData", procured_volume);
   }, [dispatch]);
+  if(purchaseTrend){
+    var labels = purchaseTrend.map(item => new Date(item.order_date).toISOString().split("T")[0]);
+var dataValues = purchaseTrend.map(item => Number(item.total_quantity));
+console.log('dataValues',dataValues)
+  }
+  if(segregationTrend){
+    var segregationLabels = segregationTrend.map(item => new Date(item.segregation_date).toISOString().split("T")[0]);
+var segregationDataValues = segregationTrend.map(item => Number(item.total_quantity));
+// console.log('dataValues',dataValues)
+  }
+  if(baleTrend){
+    var baleLabels = baleTrend.map(item => new Date(item.bale_date).toISOString().split("T")[0]);
+var baleDataValues = baleTrend.map(item => Number(item.quantity));
+// console.log('dataValues',dataValues)
+  }
   if(isLoading) {
     console.log("isLoading",isLoading)
     return (
@@ -198,14 +216,14 @@ const {isLoading}=useSelector((state) => state.dashboard);
               <div className="col-span-1 sm:col-span-1">
                 <div className="mb-4">
                   <h4 className="text-lg font-semibold mb-2">Purchase trend</h4>
-                  <div className="chart-wrapper">
+                  <div className="chart-wrapper h-56">
                     <Bar
                       data={{
-                        labels: ["A", "B", "C", "D", "E"],
+                        labels: labels,
                         datasets: [
                           {
                             label: "Revenue",
-                            data: [200, 300, 400, 500, 600],
+                            data: dataValues,
                           },
                         ],
                         
@@ -292,14 +310,14 @@ const {isLoading}=useSelector((state) => state.dashboard);
                   <h4 className="text-lg font-semibold mb-2">
                     Segregation trend
                   </h4>
-                  <div className="chart-wrapper">
+                  <div className="chart-wrapper h-56">
                     <Bar
                       data={{
-                        labels: ["A", "B", "C", "D", "E"],
+                        labels: segregationLabels,
                         datasets: [
                           {
                             label: "Revenue",
-                            data: [200, 300, 400, 500, 600],
+                            data: segregationDataValues,
                           },
                         ],
                       }}
@@ -343,11 +361,11 @@ const {isLoading}=useSelector((state) => state.dashboard);
               <div className="chart-wrapper" style={{ height: "380px" }}>
                 <Bar
                   data={{
-                    labels: ["A", "B", "C", "D", "E"],
+                    labels:baleLabels,
                     datasets: [
                       {
                         label: "Revenue",
-                        data: [200, 300, 400, 500, 600],
+                        data: baleDataValues,
                       },
                     ],
                   }}

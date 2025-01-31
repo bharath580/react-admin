@@ -30,7 +30,7 @@ export default function Layout() {
       <div className="h-screen w-64 fixed top-0 left-0 bg-gray-800">
         <Sidebar />
       </div>
-      <main className="ml-72 flex-1">
+      <main className="ml-72 mt-[1.12rem] flex-1">
         <Routes>
           <Route index path="/" element={<Dashboard2 />} />
           <Route path="/purchase" element={<Purchase />} />

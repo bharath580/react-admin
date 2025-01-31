@@ -51,7 +51,7 @@ if(isLoading){
           placeholder="Search"
           value={searchTerm}
           onChange={handleSearchChange}
-          className="border my-2 mx-1 w-56 rounded p-1"
+          className="border my-2  w-full rounded p-1"
         />
         </div>
       
@@ -84,8 +84,8 @@ if(isLoading){
             </Link>
           </td>
           <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{order.supplier_name}</td>
-          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">100</td>
-          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">100Kg</td>
+          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{order.order_number}</td>
+          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{order.total_quantity  || 0 } kg</td>
           
         </tr>
       ))}

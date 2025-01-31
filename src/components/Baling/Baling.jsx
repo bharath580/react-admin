@@ -37,7 +37,7 @@ export default function Baling() {
             placeholder="Search"
             value={searchTerm}
             onChange={handleSearchChange}
-            className="border my-2 mx-1 w-56 rounded p-1"
+            className="border my-2  w-full rounded p-1"
           />
         </div>
       </div>
@@ -75,7 +75,7 @@ export default function Baling() {
                     {order.bale_material}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                    {order.bale_quantity}
+                    {order.bale_quantity} kg
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                     {order.date}

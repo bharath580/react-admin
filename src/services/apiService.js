@@ -1,12 +1,13 @@
 import axios from "axios";
 
 const api = axios.create({
-    // baseURL: 'http://localhost:2000/api',
-    baseURL: 'http://13.201.47.31:2000/api',
+    baseURL: 'http://localhost:2000/api',
+    // baseURL: 'http://13.202.98.144:2000/api/',
     
 });
 
 const setAuthToken = () => {
+    
     const userData = localStorage.getItem('user');
   
     if (userData) {
@@ -19,6 +20,7 @@ const setAuthToken = () => {
                     ...api.defaults.headers.common,
                     Authorization: `Bearer ${access_token}`
                 };
+                console.log("....",api.defaults.headers.common)
                 api.defaults.headers.common = headers;
             } else {
                 delete api.defaults.headers.common['Authorization'];
@@ -31,6 +33,7 @@ const setAuthToken = () => {
         delete api.defaults.headers.common['Authorization'];
     }
 };
+
 
 // Call setAuthToken to set initial token
 setAuthToken();

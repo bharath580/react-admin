@@ -39,7 +39,7 @@ export default function Sale() {
           placeholder="Search"
           value={searchTerm}
           onChange={handleSearchChange}
-          className="border my-2 mx-1 w-56 rounded p-1"
+          className="border my-2  w-full rounded p-1"
         />
         </div>
       

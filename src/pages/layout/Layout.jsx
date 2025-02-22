@@ -15,6 +15,7 @@ import SupplierDetail from "../../components/supplier/SupplierDetail";
 import BatchDetail from "../../components/batches/BatchDetail";
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate,Outlet } from 'react-router-dom'
+import { BreadCrumbs } from "../../common/BreadCrumbs";
 
 export default function Layout() {
   const {user}= useSelector(state=>state.auth)
@@ -30,11 +31,12 @@ export default function Layout() {
       <div className="h-screen w-64 fixed top-0 left-0 bg-gray-800">
         <Sidebar />
       </div>
-      <main className="ml-72 mt-[1.12rem] flex-1">
+      <main className="ml-72 mt-[1rem] flex-1">
+        <BreadCrumbs />
         <Routes>
           <Route index path="/" element={<Dashboard2 />} />
           <Route path="/purchase" element={<Purchase />} />
-          <Route path="/purchaseDetails/:id" element={<PurchaseDetails />} />
+          <Route path="/purchase/:id" element={<PurchaseDetails />} />
           <Route path="/supplier" element={<Supplier />} />
           <Route path="/supplier/:id" element={<SupplierDetail />} />
           <Route path="/baling" element={<Baling />} />

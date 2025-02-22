@@ -22,15 +22,13 @@ export default function BalingDetails() {
   }
   return (
     <div className="m-14 border-gray-400 border-2  ">
-    <div className="pl-3 py-5 bg-gray-400 text-lg font-bold  border-gray-400 border-b-2">
+    <div className="pl-3 py-5 bg-green-700 text-white text-lg font-bold  border-gray-400 border-b-2">
      Bale #{summary[0].bale_id}
    </div>
    <div class="grid grid-cols-3 gap-x-4 gap-y-10 mt-4">
      <div className="text-center">
        <div className="text-lg font-semibold">Bale Material</div>
      <p className="text-3xl text-green-400 mb-1">{summary[0].bale_material}</p>
-
-      
      </div>
 
      <div className="text-center">

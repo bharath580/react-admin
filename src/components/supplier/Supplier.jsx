@@ -79,7 +79,7 @@ if(isLoading){
       {filteredSupplierData && filteredSupplierData.map((order) => (
         <tr key={order.supplier_id}>
           <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-            <Link to={`/layout/supplier/${order.supplier_id}`} className="text-indigo-600 hover:text-indigo-900">
+            <Link to={`/layout/supplier/${order.supplier_id}`} className="text-green-700 hover:text-green-900">
               {order.supplier_id}
             </Link>
           </td>

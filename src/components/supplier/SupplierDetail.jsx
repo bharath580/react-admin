@@ -22,7 +22,7 @@ export default function SupplierDetail() {
   }
   return (
     <div className="m-14 border-gray-400 border-2">
-      <div className="pl-3 py-5 bg-gray-400 text-lg font-bold  border-gray-400 border-b-2">
+      <div className="pl-3 py-5 bg-green-700 text-lg font-bold text-white border-gray-400 border-b-2">
         User #
         {supplierDetail && supplierDetail[0] && supplierDetail[0].supplier_id}
       </div>
@@ -30,7 +30,7 @@ export default function SupplierDetail() {
         <div className="text-center">
           {/* <div className="text-lg">Photo</div> */}
           <img
-            className="items-center justify-center m-2 mt-4 w-60 h-72"
+            className="items-center object-contain justify-center m-2 mt-4 w-60 h-72"
             src={
               supplierDetail &&
               supplierDetail[0] &&

@@ -29,7 +29,7 @@ export default function PurchaseDetails() {
   return (
     <>
       <div className="m-7 border-gray-400 border-2">
-        <div className="pl-3 py-5 bg-gray-400 text-lg font-bold  border-gray-400 border-b-2">
+        <div className="pl-3 py-5 bg-green-700 text-lg font-bold text-white border-gray-400 border-b-2">
           Order #{purchase_order[0]?.po_id}
         </div>
         <div class="grid grid-cols-4 gap-x-4 gap-y-10 mt-4">
@@ -94,7 +94,7 @@ export default function PurchaseDetails() {
               {purchase_order_details.map((purchase_order_details) => (
                 <tr>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                    {purchase_order_details.po_details_id}
+                    {purchase_order_details.material_code}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                     {purchase_order_details.material_name}
@@ -135,7 +135,7 @@ export default function PurchaseDetails() {
                   alt="Supervisor Signature"
                 />
               ) : (
-                <div className="flex items-center justify-center w-28 h-28 border rounded bg-gray-100">
+                <div className="flex text-sm opacity-50 items-center justify-center w-28 h-28 border rounded bg-gray-100">
                   No Signature
                 </div>
               )}
@@ -152,7 +152,7 @@ export default function PurchaseDetails() {
                   alt="Supplier Signature"
                 />
               ) : (
-                <div className="flex items-center justify-center w-28 h-28 border rounded bg-gray-100">
+                <div className="flex items-center text-sm opacity-50 justify-center w-28 h-28 border rounded bg-gray-100">
                   No Signature
                 </div>
               )}
@@ -169,7 +169,7 @@ export default function PurchaseDetails() {
                   alt="Driver Signature"
                 />
               ) : (
-                <div className="flex items-center justify-center w-28 h-28 border rounded bg-gray-100">
+                <div className="flex items-center opacity-50 text-sm justify-center w-28 h-28 border rounded bg-gray-100">
                   No Signature
                 </div>
               )}

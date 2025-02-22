@@ -32,8 +32,8 @@ export default function SaleDetail() {
   }
   return (
     <div className="m-14 border-gray-400 border-2  ">
-      <div className="pl-3 py-5 bg-gray-400 text-lg font-bold  border-gray-400 border-b-2">
-        Sale #
+      <div className="pl-3 py-5 bg-green-700 text-white text-lg font-bold  border-gray-400 border-b-2">
+        Sale #{summary[0].sale_id}
       </div>
       <div class="grid grid-cols-4 gap-x-4 gap-y-10 mt-4">
         <div className="text-center">

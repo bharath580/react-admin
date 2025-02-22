@@ -73,8 +73,8 @@ export default function Purchase() {
               <tr key={order.order_id}>
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                   <Link
-                    to={`/layout/purchaseDetails/${order.order_id}`}
-                    className="text-indigo-600 hover:text-indigo-900"
+                    to={`/layout/purchase/${order.order_id}`}
+                    className="text-green-700 hover:text-green-900"
                   >
                     {order.display_order_id}
                   </Link>

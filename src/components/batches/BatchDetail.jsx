@@ -49,7 +49,7 @@ console.log("isLoading",isLoading)
   }
   return (
     <div className="m-14 border-gray-400 border-2  ">
-      <div className="pl-3 py-5 bg-gray-400 text-lg font-bold  border-gray-400 border-b-2">
+      <div className="pl-3 py-5 bg-green-700 text-white text-lg font-bold  border-gray-400 border-b-2">
         Batch #{summary[0].batch_id}
       </div>
       <div class="grid grid-cols-3 gap-x-4 gap-y-10 mt-4">
@@ -130,10 +130,10 @@ console.log("isLoading",isLoading)
             <thead className="bg-gray-50">
               <tr>
                
-                <th className="px-6 py-3 text-center text-xs font-extrabold text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-extrabold text-gray-500 uppercase tracking-wider">
                   Material
                 </th>
-                <th className="px-6 py-3 text-center text-xs font-extrabold text-gray-500 uppercase tracking-wider">
+                <th className="px-6 py-3 text-left text-xs font-extrabold text-gray-500 uppercase tracking-wider">
                   Quantity
                 </th>
                
@@ -144,10 +144,10 @@ console.log("isLoading",isLoading)
                 <tr>
                   
                 
-                  <td className="px-6 py-4 whitespace-nowrap text-center text-sm text-gray-500">
+                  <td className="px-6 py-4 whitespace-nowrap  text-sm text-gray-500">
                     {order.material_name}
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap  text-center text-sm text-gray-500">
+                  <td className="px-6 py-4 whitespace-nowrap   text-sm text-gray-500">
                     {order.quantity}
                   </td>
                 

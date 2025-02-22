@@ -66,7 +66,7 @@ export default function Baling() {
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                     <Link
                       to={`/layout/baling/${order.bale_id}`}
-                      className="text-indigo-600 hover:text-indigo-900"
+                      className="text-green-700 hover:text-green-900"
                     >
                       {order.display_bale_id}
                     </Link>

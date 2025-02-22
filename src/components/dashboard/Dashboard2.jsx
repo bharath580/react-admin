@@ -21,7 +21,10 @@ export default function Dashboard2() {
     segregationMaterial,
     purchaseTrend,
     segregationTrend,
-    baleTrend
+    baleTrend,
+    baleVolumeByMaterial,
+    traceabilityValue,
+    quality
     
   } = useSelector((state) => state.dashboard.dashboardData);
 const {isLoading}=useSelector((state) => state.dashboard);
@@ -90,7 +93,7 @@ var baleDataValues = baleTrend.map(item => Number(item.quantity));
               </div>
               <div className="mt-12">
                 <div className="mb-12 grid gap-y-10 gap-x-6 md:grid-cols-2 xl:grid-cols-3">
-                  <div className="relative flex flex-col rounded-xl  bg-white text-gray-700 h-28 shadow-md border-b-4 border-l-4 border-green-500">
+                  <div className="relative flex flex-col rounded-xl  bg-white text-gray-700 h-28 shadow-md border-b-4 border-l-4 border-gray-300">
                     <div className="p-4 text-right ">
                       <p className="block antialiased font-sans text-sm leading-normal font-normal text-blue-gray-600">
                         PET Procured
@@ -105,7 +108,7 @@ var baleDataValues = baleTrend.map(item => Number(item.quantity));
                     </div>
                   </div>
 
-                  <div className="relative flex flex-col rounded-xl  bg-white text-gray-700 h-28 shadow-md border-b-4 border-l-4 border-green-500">
+                  <div className="relative flex flex-col rounded-xl  bg-white text-gray-700 h-28 shadow-md border-b-4 border-l-4 border-gray-300">
                     <div className="p-4 text-right ">
                       <p className="block antialiased font-sans text-sm leading-normal font-normal text-blue-gray-600">
                         PET Segregated
@@ -120,7 +123,7 @@ var baleDataValues = baleTrend.map(item => Number(item.quantity));
                     </div>
                   </div>
 
-                  <div className="relative flex flex-col rounded-xl  bg-white text-gray-700 h-28 shadow-md border-b-4 border-l-4 border-green-500">
+                  <div className="relative flex flex-col rounded-xl  bg-white text-gray-700 h-28 shadow-md border-b-4 border-l-4 border-gray-300">
                     <div className="p-4 text-right ">
                       <p className="block antialiased font-sans text-sm leading-normal font-normal text-blue-gray-600">
                         PET Sold
@@ -138,7 +141,7 @@ var baleDataValues = baleTrend.map(item => Number(item.quantity));
               </div>
               <div className="mt-12">
                 <div className="mb-12 grid gap-y-10 gap-x-6 md:grid-cols-2 xl:grid-cols-3">
-                  <div className="relative flex flex-col rounded-xl  bg-white text-gray-700 h-28 shadow-md border-b-4 border-l-4 border-green-500">
+                  <div className="relative flex flex-col rounded-xl  bg-white text-gray-700 h-28 shadow-md border-b-4 border-l-4 border-gray-300">
                     <div className="p-4 text-right ">
                       <p className="block antialiased font-sans text-sm leading-normal font-normal text-blue-gray-600">
                         Orders Received
@@ -151,24 +154,24 @@ var baleDataValues = baleTrend.map(item => Number(item.quantity));
                     </div>
                   </div>
 
-                  <div className="relative flex flex-col rounded-xl  bg-white text-gray-700 h-28 shadow-md border-b-4  border-l-4 border-green-500">
+                  <div className="relative flex flex-col rounded-xl  bg-white text-gray-700 h-28 shadow-md border-b-4  border-l-4 border-gray-300">
                     <div className="p-4 text-right ">
                       <p className="block antialiased font-sans text-sm leading-normal font-normal text-blue-gray-600">
                         Quality
                       </p>
                       <h4 className="block antialiased tracking-normal font-sans text-2xl font-semibold leading-snug text-blue-gray-900">
-                        0
+                      {quality} %
                       </h4>
                     </div>
                   </div>
 
-                  <div className="relative flex flex-col rounded-xl  bg-white text-gray-700 h-28 shadow-md border-l-4 border-b-4 border-green-500">
+                  <div className="relative flex flex-col rounded-xl  bg-white text-gray-700 h-28 shadow-md border-l-4 border-b-4 border-gray-300">
                     <div className="p-4 text-right ">
                       <p className="block antialiased font-sans text-sm leading-normal font-normal text-blue-gray-600">
                         Traceability
                       </p>
                       <h4 className="block antialiased tracking-normal font-sans text-2xl font-semibold leading-snug text-blue-gray-900">
-                        0
+                        {traceabilityValue} %
                       </h4>
                     </div>
                   </div>
@@ -178,7 +181,7 @@ var baleDataValues = baleTrend.map(item => Number(item.quantity));
             <hr className="h-px my-1 mx-3 bg-gray-200 border-0 dark:bg-gray-700"></hr>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 ml-3">
-              <div className="col-span-1 sm:col-span-2">
+              <div className="col-span-1 sm:col-span-2 mt-7">
                 <h4 className="text-xl font-semibold  mb-4 text-green-500">
                   Procurement
                 </h4>
@@ -224,6 +227,7 @@ var baleDataValues = baleTrend.map(item => Number(item.quantity));
                           {
                             label: "Revenue",
                             data: dataValues,
+                             backgroundColor: "lightgreen"
                           },
                         ],
                         
@@ -239,7 +243,7 @@ var baleDataValues = baleTrend.map(item => Number(item.quantity));
             </div>
 
             <div className="mb-4">
-              <h4 className="text-xl font-semibold  mb-4 text-green-500">
+              <h4 className="text-xl font-semibold mt-4 mb-4 text-green-500">
                 Top Suppliers
               </h4>
               <table className="w-full table-auto border border-gray-500">
@@ -271,7 +275,7 @@ var baleDataValues = baleTrend.map(item => Number(item.quantity));
             <hr className="h-px my-1 mx-3 bg-gray-200 border-0 dark:bg-gray-700"></hr>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 ml-3">
               <div className="col-span-1 sm:col-span-2">
-                <h4 className="text-xl font-semibold  mb-4 text-green-500">
+                <h4 className="text-xl font-semibold mt-7 mb-4 text-green-500">
                   Processing
                 </h4>
               </div>
@@ -318,6 +322,9 @@ var baleDataValues = baleTrend.map(item => Number(item.quantity));
                           {
                             label: "Revenue",
                             data: segregationDataValues,
+                            backgroundColor: "lightgreen", // Set bars to green
+                            // borderColor: "green", // Optional: border color
+                            // borderWidth: 1, // Optional: border width
                           },
                         ],
                       }}
@@ -331,7 +338,7 @@ var baleDataValues = baleTrend.map(item => Number(item.quantity));
               </div>
             </div>
             <div className="mb-4">
-              <h4 className="text-xl font-semibold  mb-4 text-green-500">
+              <h4 className="text-xl font-semibold mt-7 mb-4 text-green-500">
                 Bale volumes by material
               </h4>
               <table className="w-full table-auto border border-gray-500">
@@ -343,19 +350,19 @@ var baleDataValues = baleTrend.map(item => Number(item.quantity));
                   </tr>
                 </thead>
                 <tbody>
-                  {/* {quantityByMaterial &&
-                    quantityByMaterial.map((material) => ( */}
+                   {baleVolumeByMaterial &&
+                    baleVolumeByMaterial.map((material) => ( 
                   <tr className="">
-                    <td className="text-center border py-2">PET</td>
+                    <td className="text-center border py-2">{material.material}</td>
 
-                    <td className="text-center border py-2">500</td>
+                    <td className="text-center border py-2">{material.quantity}</td>
                   </tr>
-                  {/* ))} */}
+                  ))} 
                 </tbody>
               </table>
             </div>
             <div className="mb-4">
-              <h4 className="text-xl font-semibold  mb-4 text-green-500">
+              <h4 className="text-xl font-semibold mt-7 mb-4 text-green-500">
                 Bales Trend
               </h4>
               <div className="chart-wrapper" style={{ height: "380px" }}>
@@ -366,6 +373,7 @@ var baleDataValues = baleTrend.map(item => Number(item.quantity));
                       {
                         label: "Revenue",
                         data: baleDataValues,
+                         backgroundColor: "lightgreen"
                       },
                     ],
                   }}
